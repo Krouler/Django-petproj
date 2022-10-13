@@ -1,6 +1,3 @@
 # Django-petproj
 
-<script type="text/javascript">
-document.write ("pepeclap");
-
-</script>
+Work will start 20.10.2022
