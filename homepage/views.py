@@ -8,8 +8,8 @@ def homepage_list(request, *args):
 
 
 def biography(request, *args):
-    return render(request, 'homepage/biography.html')
+    return render(request, 'homepage/biography.html', {})
 
 
 def skills(request, *args):
-    return render(request, 'homepage/skills.html')
+    return render(request, 'homepage/skills.html', {})
