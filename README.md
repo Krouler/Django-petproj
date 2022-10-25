@@ -1,3 +1,3 @@
 # Django-petproj
 
-<h1>Work start at 20.10.2022<h1>
+<h1>Done homepage. Need frontend to add.<h1>
