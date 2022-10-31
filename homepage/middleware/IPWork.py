@@ -10,9 +10,9 @@ class Zadderjka:
 
     def __call__(self, request):
         remip = request.META.get('REMOTE_ADDR')
-        if remip in self.bannedaddrcoll429.keys() and self.bannedaddrcoll429[remip]>time.time_ns():
+        if remip in self.bannedaddrcoll429.keys() and self.bannedaddrcoll429[remip] > time.time_ns():
             return render(request, 'homepage/429.html', status=429)
-        else:
+        elif remip in self.bannedaddrcoll429.keys() and self.bannedaddrcoll429[remip] <= time.time_ns():
             try:
                 del self.bannedaddrcoll429[remip]
             except KeyError:
