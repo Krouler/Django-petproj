@@ -13,8 +13,8 @@ class Zadderjka:
         if remip in addrcollection.keys():
             addrcollection[str(remip)] += 1
         else:
-            addrcollection[str(remip)] = 0
-        if addrcollection[str(remip)] % 5 == 0 and addrcollection[str(remip)] !=0:
+            addrcollection[str(remip)] = 1
+        if addrcollection[str(remip)] % 5 == 0:
             time.sleep(5)
         return self.get_response(request)
 
