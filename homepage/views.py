@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
-
+def start(request, *args):
+    return render(request, 'start.html',{})
 
 def homepage_list(request, *args):
     return render(request, 'homepage/homepage_list.html', {})
