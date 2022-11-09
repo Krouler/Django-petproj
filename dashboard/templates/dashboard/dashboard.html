@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Dashboard</title>
 </head>
 <body>
-
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<div>
+    {% for objj in dash%}
+    <ul>
+        {% for das in objj %}
+        <li>
+            {{ das }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</div>
 </body>
 </html>
