@@ -1,0 +1,11 @@
+<html>
+ {% if dashes_list %}
+<ul>
+  {% for dash in object_list%}
+  <li><a href="/dashboard/{{ dash.id }}">{{ dash.title }}</a></li>
+  {% endfor %}
+</ul>
+ {% else %}
+ <h1>NO DATA OR NOT VALID CODE</h1>
+ {% endif %}
+</html>
