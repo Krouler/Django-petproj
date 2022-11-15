@@ -12,3 +12,6 @@ class Dashes(models.Model):
 
     def __str__(self):
         return self.title
+    def incrementViewsCount(self):
+        self.views_count +=1
+        self.save()

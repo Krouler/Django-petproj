@@ -17,3 +17,8 @@ class DashesFormm(forms.ModelForm):
     deadline_at = forms.DateTimeField(required=True, widget=DateInput(attrs={'date': 'datetime-local'}),
                                       initial=datetime.date.today(), localize=True)
 
+#class DashesViewsIncrement(forms.ModelForm):
+#    class Meta:
+#        model = Dashes
+#        fields = ('views_count')
+#        Dashes.views_count += 1
