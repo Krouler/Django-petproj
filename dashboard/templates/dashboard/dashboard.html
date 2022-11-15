@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Dashboard</title>
 </head>
 <body>
-
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<div>
+    {% if dash %}
+    {% for objj in dash%}
+    <ul>
+        <li>ID - {{ objj.id }}</li>
+        <li>Название - {{ objj.title }}</li>
+        <li>Описание - {{ objj.description }}</li>
+        <li>Дедлайн - {{ objj.deadline_at }}</li>
+        <li>Запись создана - {{ objj.created_at }}</li>
+        <li>Запись обновлена - {{ objj.updated_at }}</li>
+        <li>Количество просмотров - {{ objj.views_count }}</li>
+    </ul>
+    {% endfor %}
+    {% elif invalidform %}
+    <p>Your input data is invalid</p>
+    {% else %}
+    <p>No matches in database</p>
+    {% endif %}
+</div>
 </body>
 </html>
